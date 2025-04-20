@@ -1,0 +1,987 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BCC6B847-3BB3-43A9-ABF7-003DCA3F3C6E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Educational_Center</RootNamespace>
+    <AssemblyName>Educational_Center</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\frmAddEditNewCalss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\frmAddEditNewCalss.Designer.cs">
+      <DependentUpon>frmAddEditNewCalss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\frmGetAllTeachersTeachInClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\frmGetAllTeachersTeachInClass.Designer.cs">
+      <DependentUpon>frmGetAllTeachersTeachInClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\frmListClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\frmListClasses.Designer.cs">
+      <DependentUpon>frmListClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\frmShowClassesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\frmShowClassesDetails.Designer.cs">
+      <DependentUpon>frmShowClassesDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ucGetAllTeachersTeachInClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\ucGetAllTeachersTeachInClass.Designer.cs">
+      <DependentUpon>ucGetAllTeachersTeachInClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ucShowClassesDeatails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\ucShowClassesDeatails.Designer.cs">
+      <DependentUpon>ucShowClassesDeatails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalClasses\clsFormat.cs" />
+    <Compile Include="GlobalClasses\clsGlobal.cs" />
+    <Compile Include="GlobalClasses\clsStandardMessages.cs" />
+    <Compile Include="Groups\frmAddEditAssignStudentToGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Groups\frmAddEditAssignStudentToGroup.Designer.cs">
+      <DependentUpon>frmAddEditAssignStudentToGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups\frmAddEditGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Groups\frmAddEditGroups.Designer.cs">
+      <DependentUpon>frmAddEditGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups\frmGetAllStudentsInGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Groups\frmGetAllStudentsInGroup.Designer.cs">
+      <DependentUpon>frmGetAllStudentsInGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups\frmListGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Groups\frmListGroups.Designer.cs">
+      <DependentUpon>frmListGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups\frmShowGroupInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Groups\frmShowGroupInfo.Designer.cs">
+      <DependentUpon>frmShowGroupInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups\ucGetAllStudentsInGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Groups\ucGetAllStudentsInGroup.Designer.cs">
+      <DependentUpon>ucGetAllStudentsInGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups\ucGroupInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Groups\ucGroupInfo.Designer.cs">
+      <DependentUpon>ucGroupInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\FrmLoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\.Designer.cs">
+      <DependentUpon>FrmLoginScreen.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu\FrmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu\FrmMainMenu.Designer.cs">
+      <DependentUpon>FrmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MettingTimes\frmAddEditMeetingTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MettingTimes\frmAddEditMeetingTime.Designer.cs">
+      <DependentUpon>frmAddEditMeetingTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.Designer.cs">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmAddEditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmAddEditPerson.Designer.cs">
+      <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\ucPersonCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\ucPersonCard.Designer.cs">
+      <DependentUpon>ucPersonCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\frmAddEditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\frmAddEditStudent.Designer.cs">
+      <DependentUpon>frmAddEditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\frmListStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\frmListStudents.Designer.cs">
+      <DependentUpon>frmListStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\frmShowStudentsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\frmShowStudentsDetails.Designer.cs">
+      <DependentUpon>frmShowStudentsDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\ucStudentCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Students\ucStudentCard.Designer.cs">
+      <DependentUpon>ucStudentCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\frmAddEditSubjectsGradeLevels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\frmAddEditSubjectsGradeLevels.Designer.cs">
+      <DependentUpon>frmAddEditSubjectsGradeLevels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\frmGetAllSubjectsTaughtByTeacher.CS">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\frmGetAllSubjectsTaughtByTeacher.Designer.CS">
+      <DependentUpon>frmGetAllSubjectsTaughtByTeacher.CS</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\frmListSubjectsGradeLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\frmListSubjectsGradeLevel.Designer.cs">
+      <DependentUpon>frmListSubjectsGradeLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\ShowSubjectGradeLevelInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\ShowSubjectGradeLevelInfo.Designer.cs">
+      <DependentUpon>ShowSubjectGradeLevelInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\ucGetAllSubjectsTaughtByTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\ucGetAllSubjectsTaughtByTeacher.Designer.cs">
+      <DependentUpon>ucGetAllSubjectsTaughtByTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\ucSubjectGradeLevelCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectGradeLevel\ucSubjectGradeLevelCard.Designer.cs">
+      <DependentUpon>ucSubjectGradeLevelCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subjects\AddEditNewSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subjects\AddEditNewSubject.Designer.cs">
+      <DependentUpon>AddEditNewSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\frmAddEditAssignTeacherToSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\frmAddEditAssignTeacherToSubject.Designer.cs">
+      <DependentUpon>frmAddEditAssignTeacherToSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\frmAddEditTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\frmAddEditTeacher.Designer.cs">
+      <DependentUpon>frmAddEditTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\frmGetAllTeachersTeachSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\frmGetAllTeachersTeachSubject.Designer.cs">
+      <DependentUpon>frmGetAllTeachersTeachSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\frmListTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\frmListTeachers.Designer.cs">
+      <DependentUpon>frmListTeachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\frmShowTeacherInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\frmShowTeacherInfo.Designer.cs">
+      <DependentUpon>frmShowTeacherInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\ucGetAllSubjectsTaughtByTeacherID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teachers\ucGetAllSubjectsTaughtByTeacherID.Designer.cs">
+      <DependentUpon>ucGetAllSubjectsTaughtByTeacherID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\ucGetAllTeachersTeachSubject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teachers\ucGetAllTeachersTeachSubject.Designer.cs">
+      <DependentUpon>ucGetAllTeachersTeachSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucGenrelUserControl\ucFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGenrelUserControl\ucFilter.Designer.cs">
+      <DependentUpon>ucFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucGenrelUserControl\ucSubList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGenrelUserControl\ucSubList.Designer.cs">
+      <DependentUpon>ucSubList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmAddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmAddEditUser.Designer.cs">
+      <DependentUpon>frmAddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmListUsers.CS">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmListUsers.Designer.CS">
+      <DependentUpon>frmListUsers.CS</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmShowUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmShowUserInfo.Designer.cs">
+      <DependentUpon>frmShowUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucUserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\ucUserCard.Designer.cs">
+      <DependentUpon>ucUserCard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Classes\frmAddEditNewCalss.resx">
+      <DependentUpon>frmAddEditNewCalss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\frmGetAllTeachersTeachInClass.resx">
+      <DependentUpon>frmGetAllTeachersTeachInClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\frmListClasses.resx">
+      <DependentUpon>frmListClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\frmShowClassesDetails.resx">
+      <DependentUpon>frmShowClassesDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\ucGetAllTeachersTeachInClass.resx">
+      <DependentUpon>ucGetAllTeachersTeachInClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\ucShowClassesDeatails.resx">
+      <DependentUpon>ucShowClassesDeatails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groups\frmAddEditAssignStudentToGroup.resx">
+      <DependentUpon>frmAddEditAssignStudentToGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groups\frmAddEditGroups.resx">
+      <DependentUpon>frmAddEditGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groups\frmGetAllStudentsInGroup.resx">
+      <DependentUpon>frmGetAllStudentsInGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groups\frmListGroups.resx">
+      <DependentUpon>frmListGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groups\frmShowGroupInfo.resx">
+      <DependentUpon>frmShowGroupInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groups\ucGetAllStudentsInGroup.resx">
+      <DependentUpon>ucGetAllStudentsInGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groups\ucGroupInfo.resx">
+      <DependentUpon>ucGroupInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmLoginScreen.resx">
+      <DependentUpon>FrmLoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu\FrmMainMenu.resx">
+      <DependentUpon>FrmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MettingTimes\frmAddEditMeetingTime.resx">
+      <DependentUpon>frmAddEditMeetingTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmListPayments.resx">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmAddEditPerson.resx">
+      <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\ucPersonCard.resx">
+      <DependentUpon>ucPersonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\frmAddEditStudent.resx">
+      <DependentUpon>frmAddEditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\frmListStudents.resx">
+      <DependentUpon>frmListStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\frmShowStudentsDetails.resx">
+      <DependentUpon>frmShowStudentsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\ucStudentCard.resx">
+      <DependentUpon>ucStudentCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectGradeLevel\frmAddEditSubjectsGradeLevels.resx">
+      <DependentUpon>frmAddEditSubjectsGradeLevels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectGradeLevel\frmGetAllSubjectsTaughtByTeacher.resx">
+      <DependentUpon>frmGetAllSubjectsTaughtByTeacher.CS</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectGradeLevel\frmListSubjectsGradeLevel.resx">
+      <DependentUpon>frmListSubjectsGradeLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectGradeLevel\ShowSubjectGradeLevelInfo.resx">
+      <DependentUpon>ShowSubjectGradeLevelInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectGradeLevel\ucGetAllSubjectsTaughtByTeacher.resx">
+      <DependentUpon>ucGetAllSubjectsTaughtByTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectGradeLevel\ucSubjectGradeLevelCard.resx">
+      <DependentUpon>ucSubjectGradeLevelCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subjects\AddEditNewSubject.resx">
+      <DependentUpon>AddEditNewSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\frmAddEditAssignTeacherToSubject.resx">
+      <DependentUpon>frmAddEditAssignTeacherToSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\frmAddEditTeacher.resx">
+      <DependentUpon>frmAddEditTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\frmGetAllTeachersTeachSubject.resx">
+      <DependentUpon>frmGetAllTeachersTeachSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\frmListTeachers.resx">
+      <DependentUpon>frmListTeachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\frmShowTeacherInfo.resx">
+      <DependentUpon>frmShowTeacherInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\ucGetAllSubjectsTaughtByTeacherID.resx">
+      <DependentUpon>ucGetAllSubjectsTaughtByTeacherID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\ucGetAllTeachersTeachSubject.resx">
+      <DependentUpon>ucGetAllTeachersTeachSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucGenrelUserControl\ucFilter.resx">
+      <DependentUpon>ucFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucGenrelUserControl\ucSubList.resx">
+      <DependentUpon>ucSubList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmAddEditUser.resx">
+      <DependentUpon>frmAddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmListUsers.resx">
+      <DependentUpon>frmListUsers.CS</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmShowUserInfo.resx">
+      <DependentUpon>frmShowUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ucUserCard.resx">
+      <DependentUpon>ucUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageSlide1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-white-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7f7b0c9bf14ae9b769705a071dfb6dd0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classes-white-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students-white-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teachers-white-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subjects-white-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groups-white-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payments-white-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-white-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-white-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\study-center-white-125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\study-center-white-1251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduation-hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduation-hat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mortarboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\study-center-white-1252.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-white-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students-list1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\study-center-white-1253.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students-white-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teachers-white-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subjects-white-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classes-white-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groups-white-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payments-white-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-white-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-white-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teachings %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-reservation-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assign-to-subject-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-reservation32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_in 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-out-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender-male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender-male1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-reservation-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\experience.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inactive-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-mark1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender-female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm-password-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students-list2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-reservation-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-reservation321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-reservation-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assign-to-subject-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-reservation-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-person-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-person-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-new-person-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grade-level.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-student1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-person-502.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender-female1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Address 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-subject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grade-level1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subjects-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subject1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subject2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-reservation-322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-reservation322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-reservation323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grade-level2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subjects-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subject3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subject4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\experience1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grade-level3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\certificate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-reservation-323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-reservation-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assign-to-subject-322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subjects-322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assign-to-subject-323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classes-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-reservation-324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-reservation-325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room-type.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manage-groups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\certificate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active-user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start-time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end-time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-payments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-white-642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-blue-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manage-groups1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataBusiness-Layer\clsDataBusinessEC.csproj">
+      <Project>{507b1e3f-926f-4b9e-8186-dd99f0d1ecf7}</Project>
+      <Name>clsDataBusinessEC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

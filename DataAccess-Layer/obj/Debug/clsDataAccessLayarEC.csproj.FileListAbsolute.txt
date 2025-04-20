@@ -1,0 +1,12 @@
+C:\Users\iT\source\repos\DataAccessLayar(EC)\bin\Debug\DataAccessLayar(EC).dll
+C:\Users\iT\source\repos\DataAccessLayar(EC)\bin\Debug\DataAccessLayar(EC).pdb
+C:\Users\iT\source\repos\DataAccessLayar(EC)\obj\Debug\clsDataAccessLayarEC.csproj.AssemblyReference.cache
+C:\Users\iT\source\repos\DataAccessLayar(EC)\obj\Debug\clsDataAccessLayarEC.csproj.CoreCompileInputs.cache
+C:\Users\iT\source\repos\DataAccessLayar(EC)\obj\Debug\DataAccessLayar(EC).dll
+C:\Users\iT\source\repos\DataAccessLayar(EC)\obj\Debug\DataAccessLayar(EC).pdb
+C:\Center\DataAccess-Layer\obj\Debug\clsDataAccessLayarEC.csproj.AssemblyReference.cache
+C:\Center\DataAccess-Layer\obj\Debug\clsDataAccessLayarEC.csproj.CoreCompileInputs.cache
+C:\Center\DataAccess-Layer\obj\Debug\DataAccessLayar(EC).dll
+C:\Center\DataAccess-Layer\obj\Debug\DataAccessLayar(EC).pdb
+C:\Center\DataAccess-Layer\bin\Debug\DataAccessLayar(EC).dll
+C:\Center\DataAccess-Layer\bin\Debug\DataAccessLayar(EC).pdb
